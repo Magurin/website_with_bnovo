@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build:galleries": "node ./src/js/build-gallery-data.mjs"
+  }
+}
