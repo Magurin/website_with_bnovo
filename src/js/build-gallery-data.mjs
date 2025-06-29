@@ -6,8 +6,8 @@ import { dirname, resolve, join, extname, basename } from 'node:path';
 const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
 /** где лежат фото */
-const ROOT      = resolve(PROJECT_ROOT, 'public/images/flats');     // …/public/images/flats
-const OUT_FILE  = resolve(PROJECT_ROOT, 'public/data/galleryData.json');
+const ROOT      = resolve(PROJECT_ROOT, './public/images/flats');     // …/public/images/flats
+const OUT_FILE  = resolve(PROJECT_ROOT, './public/data/galleryData.json');
 
 const SIZES_DIR = ['desktop', 'tablet', 'mobile']; // подпапки, в которых ищем
 const VALID_EXT = new Set(['.jpg', '.jpeg']);

@@ -1,32 +1,37 @@
 /* ---------- 1. Актуальные брейкпойнты ---------- */
 const BREAKPOINTS = [
-  { width: 1920 },   // десктоп Retina / 4k
-  { width: 1280 },   // стандартный десктоп
-  { width: 768  },   // tablet
-  { width: 480  },   // mobile
+  { width: 1920 },
+  { width: 1600 },
+  { width: 1280 },
+  { width: 1024 },
+  { width:  768 },
+  { width:  560 },
+  { width:  420 },
 ];
 
-/* ---------- 2. Абсолютный путь от корня ---------- */
-function makeSrcset(name, sub, ext) {
-  const base = `/public/images/banners/${name}${sub ? `/${sub}` : ''}`;
+/* ---------- 2. srcset: /public/images/banners/<path>/<basename>-<w>.<ext> ---------- */
+function makeSrcset(path, subDir, ext) {
+  const dir      = `/public/images/banners/${path}${subDir ? `/${subDir}` : ''}`;
+  const basename = path.split('/').pop();           // home  |  rose41  |  flats/…
   return BREAKPOINTS
-    .map(({ width }) => `${base}/banner__${name}-${width}.${ext} ${width}w`)
+    .map(({ width }) => `${dir}/${basename}-${width}.${ext} ${width}w`)
     .join(', ');
 }
 
 function buildBanner(pic) {
-  const name = pic.dataset.banner;
+  const path     = pic.dataset.banner;              // напр. "home" или "flats/rose41"
+  const basename = path.split('/').pop();
 
   pic.innerHTML = `
     <source type="image/avif"
-            srcset="${makeSrcset(name, 'avif', 'avif')}"
+            srcset="${makeSrcset(path, 'avif', 'avif')}"
             sizes="100vw">
     <source type="image/webp"
-            srcset="${makeSrcset(name, 'webp', 'webp')}"
+            srcset="${makeSrcset(path, 'webp', 'webp')}"
             sizes="100vw">
     <img class="header__banner-img"
-         src="/public/images/banners/${name}/banner__${name}-1280.jpg"
-         srcset="${makeSrcset(name, '', 'jpg')}"
+         src="/public/images/banners/${path}/${basename}-1280.jpg"
+         srcset="${makeSrcset(path, '', 'jpg')}"
          sizes="100vw"
          alt="">
   `;
