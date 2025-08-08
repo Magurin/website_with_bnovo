@@ -1,127 +1,317 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кваритры в Сочи</title>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link 
-        rel="stylesheet" 
-        href="../../styles/main.css"
-    />
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Кваритры в Сочи</title>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=9dd75f0e-a691-4e15-9d22-6c64410fe97e&lang=ru_RU" type="text/javascript"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link 
+            rel="stylesheet" 
+            href="../../styles/main.css"
+        />
+    </head>
+    <body>
 
-    <header class="header">
-         <picture 
-            class="header__banner" 
-            data-banner="./flats/rose37" 
-            data-sizes="100vw">
-        </picture>
+        <header class="header">
+            <picture 
+                class="header__banner" 
+                data-banner="./flats/rose37" 
+                data-sizes="100vw">
+            </picture>
 
-        <div class="header__title font-white">
-            <h1>
-                Роз 37
-            </h1>
-        </div>
-       
-    </header>
-
-    <main class="content">
-        <div class="content__inner">
-            <section class="description__flat">
-
-                <section class="slider__container container js-gallery" data-id="rose37">
-                    <div class="flat__swiper swiper mySwiper">
-                        <div class="swiper-wrapper"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </section>
-            
-
-            </section>
-            <aside class="booking container">
-                <p class="booking-text">
-                    Цена может отличаться, <br> в зависимости от дней бронирования
-                </p>
-                <button class="booking__button button">
-                    Забронировать
-                </button>
-            </aside>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="footer__inner">
-            <p class="footer__title">Контакты</p>
-            <hr class="footer__divider divider" />
-            <div class="footer__contacts">
-                <ul class="footer__list">
-                    <li class="footer__list-item">
-                        <a 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="footer__link footer__link-telegram" 
-                            href="https://t.me/d_Oro_henko" 
-                            aria-label="Telegram">
-                            <img 
-                                src="../../../public/icons/telegram_icon.svg"
-                                alt="Telegram" 
-                                class="footer__icon" />
-                        </a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="footer__link footer__link-whatsapp" 
-                            href="https://wa.me/79673168132" 
-                            aria-label="WhatsApp">
-                            <img 
-                                src="../../../public/icons/whatsapp_icon.svg"
-                                alt="Viber" 
-                                class="footer__icon" />
-                        </a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="footer__link footer__link-viber" 
-                            href="viber://chat?number=+79673168132" 
-                            aria-label="Viber">
-                            <img 
-                                src="../../../public/icons/viber_icon.svg"
-                                alt="Viber" 
-                                class="footer__icon" />
-                        </a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="footer__link footer__link-vk" 
-                            href="https://vk.com/id712084694" 
-                            aria-label="Vkontakte">
-                            <img 
-                                src="../../../public/icons/vk_icon.svg"
-                                alt="Vkontakte" 
-                                class="footer__icon" />
-                        </a>
-                    </li>
-                </ul>
-                
-                <a class="footer__phone" href="tel:+79673168132">8 (967) 316 8132</a>
-                
+            <div class="header__title font-white">
+                <h1>
+                    Роз 37
+                </h1>
             </div>
-        </div>
-       
-    </footer>
+        
+        </header>
+
+        <main class="content">
+            <div class="content__inner">
+                <section class="description__flat">
+
+                    <section class="slider__container container js-gallery" data-id="rose37">
+                        <div class="flat__swiper swiper mySwiper">
+                            <div class="swiper-wrapper"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </section>
+                
+                    <section class="amenties__container container">
+                        <h2 class="amenties__title title">
+                            Основные удобства
+                        </h2>
+
+                        <ul class="amenties__main-list">
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/wi-fi_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Wi-Fi</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/tv_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Телевизоры</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/conditioner_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Кондиционеры</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/teapot_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Бытовая <br class="amenties__indent"/>техника</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/linen_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Постельное <br class="amenties__indent"/>белье</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/fan_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Фен</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/pot_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Набор <br class="amenties__indent"/>посуды</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/stove_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Газовая <br class="amenties__indent"/>плита</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/shower-chamber_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Душевая <br class="amenties__indent"/>кабина</p>
+                            </li>
+                            <li class="amenties__main-list-item">
+                                <img class="amenties__main-list-icon" src="../../../public/icons/flat_description/washing-machine_icon.svg" alt="" />
+                                <p class="amenties__main-list-text">Стиральная <br class="amenties__indent"/>машина</p>
+                            </li>
+                        </ul>
+
+                        <div class="amenties__info">
+
+                            <div class="amenties__bath">
+                                <h3 class="amenties__subtitle">
+                                    В ванной
+                                </h3>
+
+                                <ul class="amenties__subtitle-list">
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Туалетные <br class="amenties__indent"/>принадлежности
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Полотенца
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Фен
+                                        </p>
+                                        
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Стиральная <br class="amenties__indent"/>машина
+                                        </p>
+                                        
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Душевая <br class="amenties__indent"/>кабина
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <div class="amenties__kitchen">
+                                <h3 class="amenties__subtitle">
+                                    На кухне
+                                </h3>
+
+                                <ul class="amenties__subtitle-list">
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Газовая плита
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Столовые приборы
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Набор посуды
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Духовка
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Чайник
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Микроволновая печь
+                                        </p>
+                                    </li>
+                                    <li class="amenties__subtitle-list-item">
+                                        <p class="amenties__subtitle-list-text">
+                                            Холодильник
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
     
+                        </div>
+                    </section>
+
+                    <section class="flat_map_container container">
+                        <div class="around_flat">
+                            <h2 class="around_flat_title title">
+                                Места рядом
+                            </h2>
+                            <ul class="around_flat_list">
+                                <li class="around_flat_list-item">
+                                    <p>Парк Ривьера</p>
+                                </li>
+                                <li class="around_flat_list-item">
+                                    <p>Набережная</p>
+                                </li>
+                                <li class="around_flat_list-item">
+                                    <p>Ж/д вокзал</p>
+                                </li>
+                                <li class="around_flat_list-item">
+                                    <p>Дельфинарий</p>
+                                </li>
+                                <li class="around_flat_list-item">
+                                    <p>Морской порт</p>
+                                </li>
+                                <li class="around_flat_list-item">
+                                    <p>Атриум</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="map-wrap">
+                            <div id="map"></div>
+                        </div>      
+                </section>
+                </section>
+        
+
+                <aside class="booking container">
+                    <p class="booking-text">
+                        Цена может отличаться, <br class="booking-indent-1"> в зависимости <br class="booking-indent-2"> от дней бронирования
+                    </p>
+                    <button class="booking__button button">
+                        Забронировать
+                    </button>
+                </aside>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__inner">
+                <p class="footer__title">Контакты</p>
+                <hr class="footer__divider divider" />
+                <div class="footer__contacts">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="footer__link footer__link-telegram" 
+                                href="https://t.me/d_Oro_henko" 
+                                aria-label="Telegram">
+                                <img 
+                                    src="../../../public/icons/telegram_icon.svg"
+                                    alt="Telegram" 
+                                    class="footer__icon" />
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="footer__link footer__link-whatsapp" 
+                                href="https://wa.me/79673168132" 
+                                aria-label="WhatsApp">
+                                <img 
+                                    src="../../../public/icons/whatsapp_icon.svg"
+                                    alt="Viber" 
+                                    class="footer__icon" />
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="footer__link footer__link-viber" 
+                                href="viber://chat?number=+79673168132" 
+                                aria-label="Viber">
+                                <img 
+                                    src="../../../public/icons/viber_icon.svg"
+                                    alt="Viber" 
+                                    class="footer__icon" />
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="footer__link footer__link-vk" 
+                                href="https://vk.com/id712084694" 
+                                aria-label="Vkontakte">
+                                <img 
+                                    src="../../../public/icons/vk_icon.svg"
+                                    alt="Vkontakte" 
+                                    class="footer__icon" />
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <a class="footer__phone" href="tel:+79673168132">8 (967) 316 8132</a>
+                    
+                </div>
+            </div>
+        
+        </footer>
+
+
+
+
+
+
+
+        <script>
+        ymaps.ready(function () {
+            const map = new ymaps.Map('map', {
+                center: [43.589514, 39.719720], // широта, долгота
+                zoom: 16,
+                type: 'yandex#map',             // стандартный светлый слой
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+
+            const placemark = new ymaps.Placemark(
+                [43.589514, 39.719720],
+                { balloonContent: 'Роз 37' },
+                { preset: 'islands#redIcon' }
+            );
+            map.geoObjects.add(placemark);
+            });
+        </script>
+
+
         <script type="module" src="../../js/banner-builder.js"></script>
         <script type="module" src="../../js/slider-flats.js"></script>
     </body>
